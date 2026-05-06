@@ -13,12 +13,15 @@ model_id = os.getenv("MODEL_ID")
 bedrock = boto3.client("bedrock-runtime", region_name=region)
 
 #  Leer prompts desde archivos
-def load_prompt(path):
-    with open(path, "r", encoding="utf-8") as f:
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+def load_prompt(relative_path):
+    full_path = os.path.join(BASE_DIR, relative_path)
+    with open(full_path, "r", encoding="utf-8") as f:
         return f.read()
 
-SYSTEM_PROMPT = load_prompt("prompts/comportamiento.txt")
-CONTEXT_TEMPLATE = load_prompt("prompts/contexto.txt")
+SYSTEM_PROMPT = load_prompt("prompts/comportamiento")
+CONTEXT_TEMPLATE = load_prompt("prompts/contexto")
 
 #  Construir contexto dinámico
 def build_context(topic, history, user_input):
