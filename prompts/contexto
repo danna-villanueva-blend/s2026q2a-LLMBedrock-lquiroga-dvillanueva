@@ -1,0 +1,20 @@
+CONTEXTO DE CONVERSACIÓN:
+
+Resumen del estado actual:
+- Tema actual: {topic}
+- Nivel del usuario: {level} (si lo manejas)
+
+Últimas interacciones relevantes:
+{history}
+
+----------------------
+
+MENSAJE ACTUAL:
+{user_input}
+
+----------------------
+
+INSTRUCCIONES:
+- Usa el contexto para mantener coherencia
+- No repitas información innecesaria
+- Sé preciso y claro
