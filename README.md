@@ -66,10 +66,17 @@ Trigger: Palabras clave como pregunta, quiz, examen, practica
 Trigger: El usuario responde con a, b, c o d
 
 ## Estructura del proyecto
+
 aws-cloud-practitioner-assistant/
+
 ├── app.py                  # Aplicación principal
+
 ├── prompts/
+
 │   ├── comportamiento      # Prompt de sistema (estático)
+
 │   └── contexto            # Plantilla de contexto dinámico
-├── .env                    
-└── README.md
+
+├── .env    
+
+└── README.md 
