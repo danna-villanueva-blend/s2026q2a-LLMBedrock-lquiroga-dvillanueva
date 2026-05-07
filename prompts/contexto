@@ -1,20 +1,20 @@
-CONTEXTO DE CONVERSACIÓN:
+CONTEXTO DE LA SESIÓN
+━━━━━━━━━━━━━━━━━━━━
+Tema en curso: {topic}
+Modo activo: {mode}
 
-Resumen del estado actual:
-- Tema actual: {topic}
-- Nivel del usuario: {level} (si lo manejas)
-
-Últimas interacciones relevantes:
+HISTORIAL RECIENTE:
 {history}
+━━━━━━━━━━━━━━━━━━━━
 
-----------------------
-
-MENSAJE ACTUAL:
+MENSAJE DEL ESTUDIANTE:
 {user_input}
 
-----------------------
+━━━━━━━━━━━━━━━━━━━━
+INSTRUCCIONES DE RESPUESTA:
 
-INSTRUCCIONES:
-- Usa el contexto para mantener coherencia
-- No repitas información innecesaria
-- Sé preciso y claro
+- Usa el historial para mantener coherencia y no repetir lo ya explicado
+- Si el modo es EXPLICACIÓN: sigue la estructura → Definición / Cómo funciona / Ejemplo en AWS
+- Si el modo es EXAMEN: genera una pregunta nueva, diferente a las del historial reciente
+- Si el modo es CORRECCIÓN: evalúa la respuesta del estudiante con base en la última pregunta del historial
+- Sé preciso, breve y orientado al examen CLF-C02
